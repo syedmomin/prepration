@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col bg-danger" cdkDropList [cdkDropListData]="list1" (cdkDropListDropped)="drop($event)">
+      <h2 *ngFor="let item of list1" class="item" cdkDrag>{{ item }}</h2>
+    </div>
+    <div class="col bg-info" cdkDropList [cdkDropListData]="list2" (cdkDropListDropped)="drop($event)">
+      <h2 *ngFor="let item of list2" class="item" cdkDrag>{{ item }}</h2>
+    </div>
+  </div>
+</div>
