@@ -1,8 +1,28 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="logo">MyApp</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/drag">Drag</button>
+    <button mat-button routerLink="/table">Table</button>
+    <button mat-button routerLink="/login">Login</button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 
-<mat-toolbar-row>
-  <button mat-button routerLink="/home">Home</button>
-  <button mat-button routerLink="/drag">Drag</button>
-  <button mat-button routerLink="/table">Table</button>
-</mat-toolbar-row>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Card Title 1</mat-card-title>
+    <mat-card-subtitle>Card Subtitle 1</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Some content for the first card.</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Action 1</button>
+    <button mat-button>Action 2</button>
+  </mat-card-actions>
+</mat-card>
+
+
 <router-outlet></router-outlet>
+
