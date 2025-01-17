@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { DragComponent } from './drag/drag.component';
-import { TableComponent } from './table/table.component';
+import { DragComponent } from './components/drag/drag.component';
+import { TableComponent } from './components/table/table.component';
 
 export const routes: Routes = [
     {

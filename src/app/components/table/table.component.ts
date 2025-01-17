@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { UserService, User } from '../services/user.service';
+import { User, UserService } from '../../@core/services/user.service';
 
 @Component({
   selector: 'app-table',
