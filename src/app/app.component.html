@@ -1,12 +1,29 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span class="logo">MyApp</span>
-    <span class="spacer"></span>
-    <button mat-button routerLink="/drag">Drag</button>
-    <button mat-button routerLink="/table">Table</button>
-    <button mat-button routerLink="/login">Login</button>
-  </mat-toolbar-row>
-</mat-toolbar>
+<nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-white text-lg font-bold">
+      MyApp
+    </div>
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="text-gray-300 hover:text-white">Home</a>
+      <a href="#" class="text-gray-300 hover:text-white">About</a>
+      <a href="#" class="text-gray-300 hover:text-white">Services</a>
+      <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden">
+    <a href="#" class="block text-gray-300 hover:text-white p-2">Home</a>
+    <a href="#" class="block text-gray-300 hover:text-white p-2">About</a>
+    <a href="#" class="block text-gray-300 hover:text-white p-2">Services</a>
+    <a href="#" class="block text-gray-300 hover:text-white p-2">Contact</a>
+  </div>
+</nav>
 
 
 <mat-card class="example-card">
