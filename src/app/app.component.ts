@@ -1,18 +1,29 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
   imports: [
-    MatButtonModule,
-    MatCardModule,
+    CommonModule,
     RouterOutlet,
-    RouterLink],
+    RouterLink
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
+  componentsDetails = [
+    {
+      name: 'Table',
+      url: 'table',
+      description: 'Table component',
+    },
+    {
+      name: 'Drag',
+      url: 'drag',
+      description: 'Drag component',
+    }
+  ]
 }
