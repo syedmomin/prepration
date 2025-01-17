@@ -24,6 +24,11 @@ export class AppComponent {
       name: 'Drag',
       url: 'drag',
       description: 'Drag component',
+    },
+    {
+      name: 'Test',
+      url: 'test',
+      description: 'Test component',
     }
   ]
 }
