@@ -26,9 +26,14 @@ export class AppComponent {
       description: 'Drag component',
     },
     {
-      name: 'Test',
-      url: 'test',
+      name: 'Table Sorting',
+      url: 'table-sorting',
       description: 'Test component',
+    },
+    {
+      name: 'Login',
+      url: 'login',
+      description: 'Login component',
     }
   ]
 }
