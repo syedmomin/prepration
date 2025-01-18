@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { User, UserService } from '../../@core/services/user.service';
+import { Employee, UserService } from '../../@core/services/user.service';
 
 @Component({
   selector: 'app-table',
@@ -20,14 +20,14 @@ import { User, UserService } from '../../@core/services/user.service';
 })
 export class TableComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['name', 'age', 'designation'];
-  dataSource = new MatTableDataSource<User>();
+  dataSource = new MatTableDataSource<Employee>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(data => {
+    this.userService.getEmployee().subscribe(data => {
       this.dataSource.data = data;
       // this.dataSource.paginator = this.paginator;
     });

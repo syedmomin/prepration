@@ -34,6 +34,11 @@ export class AppComponent {
       name: 'Login',
       url: 'login',
       description: 'Login component',
-    }
+    },
+    {
+      name: 'Dashboard',
+      url: 'dashboard',
+      description: 'Dashboard component',
+    },
   ]
 }
