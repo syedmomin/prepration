@@ -16,19 +16,19 @@ export class AppComponent {
 
   componentsDetails = [
     {
-      name: 'Table',
-      url: 'table',
-      description: 'Table component',
-    },
-    {
       name: 'Drag',
       url: 'drag',
       description: 'Drag component',
     },
     {
-      name: 'Table Sorting',
+      name: 'Table & pagination',
       url: 'table-sorting',
       description: 'Test component',
+    },
+    {
+      name: 'Table & Action',
+      url: 'table',
+      description: 'Table component',
     },
     {
       name: 'Login',
