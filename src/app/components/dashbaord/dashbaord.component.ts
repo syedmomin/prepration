@@ -12,8 +12,8 @@ export class DashbaordComponent {
   role: string = '';
   constructor(private userService: UserService) {
     this.userService.currentUser.subscribe((e) => {
-      this.userName = e?.name;
-      this.role = e?.role;
-    })
+      this.userName = e?.name || '';
+      this.role = e?.role || '';
+    });
   }
 }

@@ -29,6 +29,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this._userService.login(this.loginForm.value).subscribe((isValid) => {
         if (isValid) {
+          this.validation = true;
           this.router.navigate(['/dashboard']);
         } else {
           this.validation = false;

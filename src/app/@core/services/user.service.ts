@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,10 @@ import { Observable, Subject } from 'rxjs';
 export class UserService {
   private employeeUrl = 'dummy.json';
   private userUrl = 'user.json';
-  private currentUserSubject: Subject<User> = new Subject<User>();
-  public currentUser: Observable<User> = this.currentUserSubject.asObservable();
+  private currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
+  public currentUser = this.currentUserSubject.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getEmployee(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.employeeUrl);
@@ -22,18 +23,21 @@ export class UserService {
   }
 
   login(login: Login): Observable<boolean> {
-    return new Observable<boolean>(observer => {
-      this.getUsers().subscribe(users => {
+    return this.getUsers().pipe(
+      map(users => {
         const user = users.find(u => u.email === login.email && u.password === login.password);
         if (user) {
           this.currentUserSubject.next(user);
-          observer.next(true);
+          return true;
         } else {
-          observer.next(false);
+          return false;
         }
-        observer.complete();
-      });
-    });
+      })
+    );
+  }
+
+  getCurrentUser(): User | null {
+    return this.currentUserSubject.value;
   }
 }
 
