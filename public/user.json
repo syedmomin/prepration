@@ -1,5 +1,12 @@
 [
   {
+    "name": "Syed Momin",
+    "email": "s.momin@finspacegroup.co.uk",
+    "password": "1234",
+    "phone": "00000000000000",
+    "role": "admin"
+  },
+  {
     "name": "John Doe",
     "email": "john.doe@example.com",
     "password": "password123",
